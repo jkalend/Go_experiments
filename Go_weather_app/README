@@ -1,0 +1,20 @@
+for getting the weather, we will use the open-meteo API
+https://open-meteo.com/en/docs
+
+we will use the following endpoint:
+https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=uv_index_max,daylight_duration&hourly=temperature_2m,precipitation_probability,surface_pressure,wind_speed_10m&current=temperature_2m,precipitation,surface_pressure,relative_humidity_2m&timezone=Europe%2FBerlin
+
+we will use the following parameters:
+latitude: 52.52
+longitude: 13.41
+daily: uv_index_max,daylight_duration
+hourly: temperature_2m,precipitation_probability,surface_pressure,wind_speed_10m
+current: temperature_2m,precipitation,surface_pressure,relative_humidity_2m
+timezone: Europe/Berlin
+
+we will also cache the response and invalidate it after an hour
+
+we will use the following libraries:
+- net/http
+- json
+- fmt
